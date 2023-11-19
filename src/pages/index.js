@@ -1,16 +1,20 @@
-import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
+import Head from 'next/head';
+import styles from '@/styles/Home.module.css';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
+// importend all APIs
 import { startJourney } from '@/lib/start-journey'
 import { sosMessage } from '@/lib/sos-message'
 import { homeSafeMessage } from '@/lib/home-safe-message'
 
+// BUG: what is it for?
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Safe on Time</title>
+        <title>HomeOnTime</title>
         <meta name="description" content="An app to make sure women have arrived home on time." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -22,12 +26,6 @@ export default function Home() {
             <code className={styles.code}>src/pages/index.js</code>
           </p>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -37,8 +35,6 @@ export default function Home() {
                 priority
                 onClick = { () => startJourney({duration: '1800', number: '+447740146380', name: 'Rachel'}) }
               />
-            </a>
-          </div>
         </div>
 
         <div className={styles.center}>
@@ -120,6 +116,7 @@ export default function Home() {
               with&nbsp;Vercel.
             </p>
           </a>
+        </div>
         </div>
       </main>
     </>

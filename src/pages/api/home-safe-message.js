@@ -1,4 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// Download the helper library from https://www.twilio.com/docs/node/install
+// Find your Account SID and Auth Token at twilio.com/console
+// and set the environment variables. See http://twil.io/secure
 
 export default function handler(req, res) {
   console.log(req.body);

@@ -12,7 +12,7 @@ export default function handler(req, res) {
 
   const now = Date.now();
   
-  const durationMinutes = parseInt(req.body.duration) / 60;
+  const durationMinutes = parseInt(req.body.duration) / 60; // duration divided to seconds
 
   console.log({from, to, now, durationMinutes});
   

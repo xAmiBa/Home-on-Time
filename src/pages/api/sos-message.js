@@ -21,5 +21,5 @@ export default function handler(req, res) {
 
     // schedule message here 
 
-  res.status(200).json({ data: []})
+  res.status(200).json({ data: []}) // returned response
 }
